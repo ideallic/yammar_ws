@@ -6,41 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>480</height>
+    <width>1272</width>
+    <height>796</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>140</y>
-      <width>261</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>I want to build a new GUI:</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>200</y>
-      <width>301</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>init a ros-node and send msg</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -53,7 +27,7 @@
      <item>
       <widget class="QPushButton" name="pushButtonConnect">
        <property name="text">
-        <string>connect</string>
+        <string>init</string>
        </property>
       </widget>
      </item>
@@ -66,13 +40,400 @@
      </item>
     </layout>
    </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>170</y>
+      <width>1021</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="sensorTab">
+     <attribute name="title">
+      <string>Sensor</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>380</y>
+        <width>130</width>
+        <height>36</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Update all</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>93</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Sensor 1:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Sensor 2:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Sensor 3:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Sensor 4:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_9">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>113</width>
+        <height>33</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_10">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>140</y>
+        <width>113</width>
+        <height>33</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_11">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>290</y>
+        <width>113</width>
+        <height>33</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_12">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>220</y>
+        <width>113</width>
+        <height>33</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="videoTab">
+     <attribute name="title">
+      <string>Video</string>
+     </attribute>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>110</y>
+        <width>411</width>
+        <height>301</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="graphicsView_2">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>110</y>
+        <width>391</width>
+        <height>301</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>70</y>
+        <width>256</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Camera:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>70</y>
+        <width>131</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Guide Line:</string>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>490</x>
+        <y>110</y>
+        <width>20</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="motorTab">
+     <attribute name="title">
+      <string>Motors</string>
+     </attribute>
+     <widget class="QToolBox" name="toolBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>971</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="reapPage">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>971</width>
+         <height>285</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Reap</string>
+       </attribute>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>20</y>
+          <width>221</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Start</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="geometry">
+         <rect>
+          <x>620</x>
+          <y>130</y>
+          <width>221</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Stop</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>0</y>
+          <width>511</width>
+          <height>271</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Reel:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit"/>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_2"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>CB:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_3"/>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_6"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>FH:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_4"/>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_7"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>PF:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_5"/>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_8"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="threshPage">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>971</width>
+         <height>285</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Thresh</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="gainPage">
+       <attribute name="label">
+        <string>Gain</string>
+       </attribute>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Page</string>
+     </attribute>
+    </widget>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>640</width>
+     <width>1272</width>
      <height>30</height>
     </rect>
    </property>
