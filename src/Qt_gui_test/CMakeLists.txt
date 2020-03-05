@@ -21,12 +21,14 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(SOURCES
   src/mainwindow.cpp
+  src/bigcamera.cpp
   src/qnode.cpp
   src/main.cpp
 )
 
 set(FORMS
   src/mainwindow.ui
+  src/bigcamera.ui
 )
 
 catkin_package(

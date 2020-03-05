@@ -1,4 +1,5 @@
 ﻿#include "mainwindow.h"
+#include "bigcamera.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(int argc, char** argv, QWidget *parent):
@@ -41,4 +42,18 @@ void MainWindow::displayMat(const QImage &image)
       qimage_ = image.copy();
       ui->label_camera->setPixmap(QPixmap::fromImage(qimage_.scaled(ui->label_camera->size(),Qt::KeepAspectRatio)));
       qimage_mutex_.unlock();
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+      auto b = new BigCamera;
+      b->show();
+//      this->close();
+}
+
+void Sleep(int msec)
+{
+  QTime dieTime = QTime::currentTime().addMSecs(msec);
+  while( QTime::currentTime() < dieTime )
+    QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
 }

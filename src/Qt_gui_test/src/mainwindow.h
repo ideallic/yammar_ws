@@ -5,6 +5,7 @@
 #include <qnode.h>
 #include <QImage>
 #include <QMutex>
+#include <QTime>
 
 using namespace test_gui;
 
@@ -26,6 +27,8 @@ private slots:
     void on_pushButtonSend_clicked();
     void updateLogcamera();
     void displayMat(const QImage& image);
+
+    void on_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;

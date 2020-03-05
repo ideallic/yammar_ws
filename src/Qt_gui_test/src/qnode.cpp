@@ -95,12 +95,12 @@ void QNode::run()
     int count = 0;
     while (ros::ok())
     {
-        std_msgs::String msg;
-        std::stringstream ss;
-        ss << "hello world -- " << count;
-        msg.data = ss.str();
-        chatter_publisher.publish(msg);
-        log(Info,std::string("I sent: ")+msg.data);
+//        std_msgs::String msg;
+//        std::stringstream ss;
+//        ss << "hello world -- " << count;
+//        msg.data = ss.str();
+//        chatter_publisher.publish(msg);
+//        log(Info,std::string("I sent: ")+msg.data);
         ros::spinOnce();
         //loop_rate.sleep();
         initDur.sleep();
