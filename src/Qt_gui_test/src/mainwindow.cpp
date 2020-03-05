@@ -39,7 +39,6 @@ void MainWindow::displayMat(const QImage &image)
 {
       qimage_mutex_.lock();
       qimage_ = image.copy();
-      ui->label_camera->setPixmap(QPixmap::fromImage(qimage_));
-      ui->label_camera->resize(ui->label_camera->pixmap()->size());
+      ui->label_camera->setPixmap(QPixmap::fromImage(qimage_.scaled(ui->label_camera->size(),Qt::KeepAspectRatio)));
       qimage_mutex_.unlock();
 }
