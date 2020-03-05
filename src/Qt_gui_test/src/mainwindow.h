@@ -6,6 +6,7 @@
 #include <QImage>
 #include <QMutex>
 #include <QTime>
+#include <QString>
 
 using namespace test_gui;
 
@@ -29,6 +30,8 @@ private slots:
     void displayMat(const QImage& image);
 
     void on_pushButton_clicked();
+
+    void on_horizontalSlider_sliderMoved(int position);
 
 private:
     Ui::MainWindow *ui;

@@ -57,3 +57,9 @@ void Sleep(int msec)
   while( QTime::currentTime() < dieTime )
     QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
 }
+
+void MainWindow::on_horizontalSlider_sliderMoved(int position)
+{
+    QString text = QString::number(30*position);
+    this->ui->lineEdit_2->setText(text);
+}

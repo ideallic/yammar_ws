@@ -50,7 +50,7 @@ void QNode::myCallback_img(const sensor_msgs::ImageConstPtr &msg)
     //QImage image(conversion_mat_.data, conversion_mat_.cols, conversion_mat_.rows, conversion_mat_.step[0], QImage::Format_RGB888);
     image = QImage(img.data,img.cols,img.rows,img.step[0],QImage::Format_RGB888);
     //img = cv_bridge::toCvShare(msg, "bgr8")->image;
-    ROS_INFO("I'm setting picture in mul_t callback function!");
+//    ROS_INFO("I'm setting picture in mul_t callback function!");
     Q_EMIT loggingCamera();
     //cv::waitKey(33);
   }
