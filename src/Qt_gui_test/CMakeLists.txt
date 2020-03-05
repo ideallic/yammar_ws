@@ -9,8 +9,11 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   geometry_msgs
+  cv_bridge
+  image_transport
 )
 find_package(Qt5  REQUIRED COMPONENTS  Widgets  )
+find_package(OpenCV REQUIRED)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)

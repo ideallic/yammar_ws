@@ -7,6 +7,12 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent):
     qnode(argc,argv)
 {
     ui->setupUi(this);
+
+    QObject::connect(&qnode, SIGNAL(rosShutdown()), this, SLOT(close()));
+
+    QObject::connect(&qnode,SIGNAL(loggingCamera()),this,SLOT(updateLogcamera()));
+//    QObject::connect(&qnode, SIGNAL(loggingUpdated()), this, SLOT(updateLoggingView()));
+
 }
 
 MainWindow::~MainWindow()
@@ -24,8 +30,16 @@ void MainWindow::on_pushButtonSend_clicked()
     qnode.ros_test("I changed this world!");
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::updateLogcamera()
 {
-    qnode.init();
-    qnode.ros_test("I changed this world again!");
+  displayMat(qnode.image);
+}
+
+void MainWindow::displayMat(const QImage &image)
+{
+      qimage_mutex_.lock();
+      qimage_ = image.copy();
+      ui->label_camera->setPixmap(QPixmap::fromImage(qimage_));
+      ui->label_camera->resize(ui->label_camera->pixmap()->size());
+      qimage_mutex_.unlock();
 }

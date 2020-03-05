@@ -19,6 +19,12 @@
 #include <string>
 #include <QThread>
 #include <QStringListModel>
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <image_transport/image_transport.h>
+#include <cv_bridge/cv_bridge.h>
+#include <QImage>
 
 /*****************************************************************************
 ** Namespaces
@@ -38,6 +44,11 @@ public:
     bool init();
     bool init(const std::string &master_url, const std::string &host_url);
     void run();
+    void myCallback_img(const sensor_msgs::ImageConstPtr& msg);//camera callback function
+
+    QString str;
+    cv::Mat img;
+    QImage image;
 
     /*********************
     ** Logging
@@ -63,9 +74,10 @@ public:
     void ros_test(const std::string s);
 
 Q_SIGNALS:
-    void loggingUpdated();
+//    void loggingUpdated();
     void loggingListen();
     void rosShutdown();
+    void loggingCamera();
 
 private:
     int init_argc;
@@ -74,6 +86,7 @@ private:
     ros::Subscriber chatter_subscriber;
     QStringListModel logging_model;
     QStringListModel logging_listen;
+    image_transport::Subscriber image_sub;
 };
 
 }  // namespace test_gui

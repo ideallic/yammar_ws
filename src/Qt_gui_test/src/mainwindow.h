@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include <qnode.h>
+#include <QImage>
+#include <QMutex>
 
 using namespace test_gui;
 
@@ -21,14 +23,15 @@ public:
 
 private slots:
     void on_pushButtonConnect_clicked();
-
     void on_pushButtonSend_clicked();
-
-    void on_pushButton_clicked();
+    void updateLogcamera();
+    void displayMat(const QImage& image);
 
 private:
     Ui::MainWindow *ui;
     QNode qnode;
+    QImage qimage_;
+    mutable QMutex qimage_mutex_;
 };
 
 #endif // MAINWINDOW_H

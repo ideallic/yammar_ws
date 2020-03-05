@@ -50,25 +50,12 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="sensorTab">
      <attribute name="title">
       <string>Sensor</string>
      </attribute>
-     <widget class="QPushButton" name="pushButton">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>380</y>
-        <width>130</width>
-        <height>36</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Update all</string>
-      </property>
-     </widget>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
@@ -268,7 +255,7 @@
          <string>Stop</string>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -406,8 +393,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>971</width>
-         <height>285</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">
@@ -415,6 +402,14 @@
        </attribute>
       </widget>
       <widget class="QWidget" name="gainPage">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>100</width>
+         <height>30</height>
+        </rect>
+       </property>
        <attribute name="label">
         <string>Gain</string>
        </attribute>
@@ -426,6 +421,19 @@
       <string>Page</string>
      </attribute>
     </widget>
+   </widget>
+   <widget class="QLabel" name="label_camera">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>20</y>
+      <width>381</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

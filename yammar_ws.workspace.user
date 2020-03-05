@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.9.2, 2020-02-29T10:17:42. -->
+<!-- Written by QtCreator 4.9.2, 2020-03-05T17:38:33. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -105,21 +105,21 @@
     <value type="int" key="ProjectExplorer.BuildConfiguration.BuildStepListCount">2</value>
     <value type="bool" key="ProjectExplorer.BuildConfiguration.ClearSystemEnvironment">false</value>
     <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
-     <value type="QString">CMAKE_PREFIX_PATH=/home/bit/yammar_ws/devel:/home/bit/ROS-WS-PLANNING/devel:/opt/ros/kinetic</value>
-     <value type="QString">LD_LIBRARY_PATH=/home/bit/yammar_ws/devel/lib:/home/bit/ROS-WS-PLANNING/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu</value>
+     <value type="QString">CMAKE_PREFIX_PATH=/home/bit/yammar_ws/devel:/opt/ros/kinetic</value>
+     <value type="QString">LD_LIBRARY_PATH=/home/bit/yammar_ws/devel/lib:/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu</value>
      <value type="QString">PATH=/home/bit/yammar_ws/devel/bin:/opt/ros/kinetic/bin:/home/bit/bin:/home/bit/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin</value>
-     <value type="QString">PKG_CONFIG_PATH=/home/bit/yammar_ws/devel/lib/pkgconfig:/home/bit/ROS-WS-PLANNING/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig</value>
+     <value type="QString">PKG_CONFIG_PATH=/home/bit/yammar_ws/devel/lib/pkgconfig:/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig</value>
      <value type="QString">PWD=/home/bit/yammar_ws</value>
-     <value type="QString">PYTHONPATH=/home/bit/yammar_ws/devel/lib/python2.7/dist-packages:/home/bit/ROS-WS-PLANNING/devel/lib/python2.7/dist-packages:/opt/ros/kinetic/lib/python2.7/dist-packages</value>
-     <value type="QString">ROSLISP_PACKAGE_DIRECTORIES=/home/bit/yammar_ws/devel/share/common-lisp:/home/bit/ROS-WS-PLANNING/devel/share/common-lisp</value>
+     <value type="QString">PYTHONPATH=/home/bit/yammar_ws/devel/lib/python2.7/dist-packages:/opt/ros/kinetic/lib/python2.7/dist-packages</value>
+     <value type="QString">ROSLISP_PACKAGE_DIRECTORIES=/home/bit/yammar_ws/devel/share/common-lisp</value>
      <value type="QString">ROS_DISTRO=kinetic</value>
      <value type="QString">ROS_ETC_DIR=/opt/ros/kinetic/etc/ros</value>
      <value type="QString">ROS_MASTER_URI=http://localhost:11311</value>
-     <value type="QString">ROS_PACKAGE_PATH=/home/bit/yammar_ws/src:/home/bit/ROS-WS-PLANNING/src:/opt/ros/kinetic/share</value>
+     <value type="QString">ROS_PACKAGE_PATH=/home/bit/yammar_ws/src:/opt/ros/kinetic/share</value>
      <value type="QString">ROS_PYTHON_VERSION=2</value>
      <value type="QString">ROS_ROOT=/opt/ros/kinetic/share/ros</value>
      <value type="QString">ROS_VERSION=1</value>
-     <value type="QString">SHLVL=93</value>
+     <value type="QString">SHLVL=141</value>
      <value type="QString">TERM=xterm</value>
      <value type="QString">_=/usr/bin/env</value>
     </valuelist>
