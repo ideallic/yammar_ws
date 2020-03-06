@@ -76,7 +76,7 @@ bool QNode::init()
     // Add your ros communications here.
     chatter_publisher = n.advertise<std_msgs::String>("testgui_chat", 1000);
     chatter_subscriber = nSub.subscribe("testgui_chat", 100, &QNode::RecvTopicCallback, this);
-    image_sub = it.subscribe("camera/image",100,&QNode::myCallback_img,this);//相机尝试
+    image_sub = it.subscribe("/boud_depth",100,&QNode::myCallback_img,this);//相机尝试
 
     //ros::spin();
     start();
