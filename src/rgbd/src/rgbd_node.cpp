@@ -333,8 +333,8 @@ void boud_RGB(Mat& rgb,pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_kd)
 
         }
 
-    //imshow("vertical",ROIimg);
-    //imshow("rgb",rgb);
+//    imshow("vertical",ROIimg);
+//    imshow("rgb",rgb);
 //    imshow("rgb_depth_kd",rgb_kd);
 
 //    int key=cvWaitKey(100);

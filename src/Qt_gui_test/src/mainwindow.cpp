@@ -63,3 +63,19 @@ void MainWindow::on_horizontalSlider_sliderMoved(int position)
     QString text = QString::number(30*position);
     this->ui->lineEdit_2->setText(text);
 }
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    double speed = this->ui->lineEdit_13->text().toDouble();
+    speed = speed-0.2;
+    QString qspeed = QString::number(speed);
+    this->ui->lineEdit_13->setText(qspeed);
+}
+
+void MainWindow::on_pushButton_13_clicked()
+{
+  double speed = this->ui->lineEdit_13->text().toDouble();
+  speed = speed+0.2;
+  QString qspeed = QString::number(speed);
+  this->ui->lineEdit_13->setText(qspeed);
+}

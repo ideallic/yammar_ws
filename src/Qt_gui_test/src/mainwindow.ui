@@ -86,7 +86,7 @@
                  </sizepolicy>
                 </property>
                 <property name="text">
-                 <string>Reap</string>
+                 <string>Sensor</string>
                 </property>
                </widget>
               </item>
@@ -129,6 +129,9 @@
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(204, 0, 0);</string>
                 </property>
                 <property name="text">
                  <string>Grain</string>
@@ -199,6 +202,19 @@
               </property>
               <property name="text">
                <string>Human!</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_4">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Grain full!</string>
               </property>
              </widget>
             </item>
@@ -326,7 +342,7 @@
               <item>
                <widget class="QLabel" name="label_9">
                 <property name="text">
-                 <string>Camera:</string>
+                 <string>Guide Line:</string>
                 </property>
                </widget>
               </item>
@@ -363,7 +379,7 @@
       </widget>
       <widget class="QWidget" name="motorTab">
        <attribute name="title">
-        <string>Motors</string>
+        <string>Manual Control</string>
        </attribute>
        <widget class="QToolBox" name="toolBox">
         <property name="geometry">
@@ -375,7 +391,7 @@
          </rect>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>3</number>
         </property>
         <widget class="QWidget" name="reapPage">
          <property name="geometry">
@@ -383,7 +399,7 @@
            <x>0</x>
            <y>0</y>
            <width>971</width>
-           <height>475</height>
+           <height>433</height>
           </rect>
          </property>
          <attribute name="label">
@@ -393,7 +409,7 @@
           <property name="geometry">
            <rect>
             <x>20</x>
-            <y>60</y>
+            <y>30</y>
             <width>511</width>
             <height>381</height>
            </rect>
@@ -557,7 +573,7 @@
           <property name="geometry">
            <rect>
             <x>630</x>
-            <y>100</y>
+            <y>70</y>
             <width>251</width>
             <height>22</height>
            </rect>
@@ -570,7 +586,7 @@
           <property name="geometry">
            <rect>
             <x>630</x>
-            <y>190</y>
+            <y>160</y>
             <width>251</width>
             <height>22</height>
            </rect>
@@ -583,7 +599,7 @@
           <property name="geometry">
            <rect>
             <x>630</x>
-            <y>280</y>
+            <y>250</y>
             <width>251</width>
             <height>22</height>
            </rect>
@@ -596,7 +612,7 @@
           <property name="geometry">
            <rect>
             <x>630</x>
-            <y>380</y>
+            <y>350</y>
             <width>251</width>
             <height>22</height>
            </rect>
@@ -609,7 +625,7 @@
           <property name="geometry">
            <rect>
             <x>180</x>
-            <y>40</y>
+            <y>10</y>
             <width>98</width>
             <height>25</height>
            </rect>
@@ -622,7 +638,7 @@
           <property name="geometry">
            <rect>
             <x>390</x>
-            <y>40</y>
+            <y>10</y>
             <width>98</width>
             <height>25</height>
            </rect>
@@ -638,7 +654,7 @@
            <x>0</x>
            <y>0</y>
            <width>971</width>
-           <height>475</height>
+           <height>433</height>
           </rect>
          </property>
          <attribute name="label">
@@ -893,7 +909,7 @@
            <x>0</x>
            <y>0</y>
            <width>971</width>
-           <height>475</height>
+           <height>433</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1142,6 +1158,143 @@
           </property>
          </widget>
         </widget>
+        <widget class="QWidget" name="page_4">
+         <attribute name="label">
+          <string>Travelling</string>
+         </attribute>
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="geometry">
+           <rect>
+            <x>201</x>
+            <y>285</y>
+            <width>71</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>↓</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_8">
+          <property name="geometry">
+           <rect>
+            <x>321</x>
+            <y>205</y>
+            <width>130</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>→</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_13">
+          <property name="geometry">
+           <rect>
+            <x>200</x>
+            <y>60</y>
+            <width>71</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>↑</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_12">
+          <property name="geometry">
+           <rect>
+            <x>11</x>
+            <y>205</y>
+            <width>130</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>20</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>←</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>640</x>
+            <y>120</y>
+            <width>98</width>
+            <height>25</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Speed:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_14">
+          <property name="geometry">
+           <rect>
+            <x>560</x>
+            <y>160</y>
+            <width>151</width>
+            <height>81</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Turning Speed:</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_13">
+          <property name="geometry">
+           <rect>
+            <x>740</x>
+            <y>120</y>
+            <width>113</width>
+            <height>33</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>1.5</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_14">
+          <property name="geometry">
+           <rect>
+            <x>740</x>
+            <y>180</y>
+            <width>113</width>
+            <height>33</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </widget>
        </widget>
        <widget class="QPushButton" name="pushButton_2">
         <property name="geometry">
@@ -1191,8 +1344,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>1111</width>
-           <height>455</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1333,8 +1486,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>1111</width>
-           <height>455</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1502,6 +1655,14 @@
          </widget>
         </widget>
         <widget class="QWidget" name="page_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1111</width>
+           <height>455</height>
+          </rect>
+         </property>
          <attribute name="label">
           <string>Grain</string>
          </attribute>
@@ -1595,14 +1756,105 @@
        <widget class="QPushButton" name="pushButtonSend">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>70</y>
-          <width>211</width>
-          <height>71</height>
+          <x>60</x>
+          <y>90</y>
+          <width>161</width>
+          <height>51</height>
          </rect>
         </property>
         <property name="text">
-         <string>test GUI node</string>
+         <string>test GUI node:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_15">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>100</y>
+          <width>671</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>xx xx xxxxx xxxx xxxxxx xxxx.</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonSend_2">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>400</y>
+          <width>161</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>test GUI node:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_16">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>410</y>
+          <width>671</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>xx xx xxxxx xxxx xxxxxx xxxx.</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonSend_3">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>300</y>
+          <width>161</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>test GUI node:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_17">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>310</y>
+          <width>671</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>xx xx xxxxx xxxx xxxxxx xxxx.</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButtonSend_4">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>190</y>
+          <width>161</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>test GUI node:</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_18">
+        <property name="geometry">
+         <rect>
+          <x>250</x>
+          <y>200</y>
+          <width>671</width>
+          <height>33</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>xx xx xxxxx xxxx xxxxxx xxxx.</string>
         </property>
        </widget>
       </widget>

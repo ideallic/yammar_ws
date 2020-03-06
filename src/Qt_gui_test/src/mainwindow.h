@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <qnode.h>
 #include <QImage>
+#include <QPixmap>
 #include <QMutex>
 #include <QTime>
 #include <QString>
@@ -32,6 +33,10 @@ private slots:
     void on_pushButton_clicked();
 
     void on_horizontalSlider_sliderMoved(int position);
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_13_clicked();
 
 private:
     Ui::MainWindow *ui;
