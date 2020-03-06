@@ -16,19 +16,21 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>310</x>
      <y>20</y>
-     <width>191</width>
+     <width>331</width>
      <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
-    <string>Camera</string>
+    <string>Grain Height</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

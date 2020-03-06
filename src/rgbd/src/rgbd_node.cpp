@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 #include <pcl/point_types.h>
 #include <ros/ros.h>
 #include <sensor_msgs/PointCloud2.h>
@@ -28,6 +29,8 @@ using namespace cv;
 
 void boud_depth(Mat& rgb,Mat& depth,pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_kd);
 void boud_RGB(Mat& rgb,pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_kd);
+void drawArrow(cv::Mat& img, cv::Point pStart, cv::Point pEnd, int len, int alpha,
+    cv::Scalar& color, int thickness = 5, int lineType = 8);
 
 Mat get_Vertical(Mat src)
 {
@@ -192,6 +195,27 @@ void boud_depth(Mat& rgb, Mat& depth,pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_k
                 continue;
             }
         }
+
+        Vec4f line_para;
+        fitLine(pointdepthimg, line_para, cv::DIST_L2, 0, 1e-2, 1e-2);
+        Point2i point0;
+        point0.x=line_para[2];
+        point0.y=line_para[3];
+        double k=line_para[1]/line_para[0];
+        Point2i pStart;
+        Point2i pEnd;
+        pStart.x=(480-point0.y+k*point0.x)/k;
+        pStart.y=480;
+        pEnd.x=(380-point0.y+k*point0.x)/k;
+        pEnd.y=380;
+        Scalar lineColor(0, 0, 255);
+        drawArrow(rgb, pStart, pEnd, 10, 45, lineColor);
+        double PI=3.1415926;
+        int zs=-atan(k)*180 / PI;
+        int xs=int(abs(-atan(k)*180 / PI-zs)*10);//保留一位小数
+
+        string angle=std::to_string(zs)+'.'+std::to_string(xs);
+        cv::putText(rgb, angle, Point2i(450,90), cv::FONT_HERSHEY_SCRIPT_SIMPLEX,2, CV_RGB(255,0,0),7);
 //        imshow("rgb",rgb);
 //        waitKey(1);
 
@@ -333,8 +357,8 @@ void boud_RGB(Mat& rgb,pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_kd)
 
         }
 
-//    imshow("vertical",ROIimg);
-//    imshow("rgb",rgb);
+    //imshow("vertical",ROIimg);
+    //imshow("rgb",rgb);
 //    imshow("rgb_depth_kd",rgb_kd);
 
 //    int key=cvWaitKey(100);
@@ -348,3 +372,20 @@ void boud_RGB(Mat& rgb,pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_kd)
 
 //    waitKey(1);
 }
+
+void drawArrow(cv::Mat& img, cv::Point pStart, cv::Point pEnd, int len, int alpha,
+     cv::Scalar& color, int thickness, int lineType)
+ {
+     const double PI = 3.1415926;
+     Point arrow;
+    //计算 θ 角（最简单的一种情况在下面图示中已经展示，关键在于 atan2 函数，详情见下面）
+     double angle = atan2((double)(pStart.y - pEnd.y), (double)(pStart.x - pEnd.x));
+     line(img, pStart, pEnd, color, thickness, lineType);
+     //计算箭角边的另一端的端点位置（上面的还是下面的要看箭头的指向，也就是pStart和pEnd的位置）
+     arrow.x = pEnd.x + len * cos(angle + PI * alpha / 180);
+     arrow.y = pEnd.y + len * sin(angle + PI * alpha / 180);
+     line(img, pEnd, arrow, color, thickness, lineType);
+     arrow.x = pEnd.x + len * cos(angle - PI * alpha / 180);
+     arrow.y = pEnd.y + len * sin(angle - PI * alpha / 180);
+     line(img, pEnd, arrow, color, thickness, lineType);
+ }
