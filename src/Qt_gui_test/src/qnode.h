@@ -25,6 +25,9 @@
 #include <image_transport/image_transport.h>
 #include <cv_bridge/cv_bridge.h>
 #include <QImage>
+#include <QString>
+
+#include "height_border_msgs/height_border.h"
 
 /*****************************************************************************
 ** Namespaces
@@ -49,6 +52,7 @@ public:
     QString str;
     cv::Mat img;
     QImage image;
+    QString text;
 
     /*********************
     ** Logging
@@ -67,6 +71,7 @@ public:
     void log( const LogLevel &level, const std::string &msg);
 
     void RecvTopicCallback(const std_msgs::StringConstPtr &msg);
+    void TextCallback(const height_border_msgs::height_borderConstPtr &msg);
     QStringListModel* loggingModelLis()
         {return &logging_listen;}
     void log_listen(const LogLevel &level, const std::string &msg);
@@ -78,12 +83,14 @@ Q_SIGNALS:
     void loggingListen();
     void rosShutdown();
     void loggingCamera();
+    void loggingText();
 
 private:
     int init_argc;
     char** init_argv;
     ros::Publisher chatter_publisher;
     ros::Subscriber chatter_subscriber;
+    ros::Subscriber text_subscriber;
     QStringListModel logging_model;
     QStringListModel logging_listen;
     image_transport::Subscriber image_sub;

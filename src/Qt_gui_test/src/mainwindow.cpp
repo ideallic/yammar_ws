@@ -12,6 +12,7 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent):
     QObject::connect(&qnode, SIGNAL(rosShutdown()), this, SLOT(close()));
 
     QObject::connect(&qnode,SIGNAL(loggingCamera()),this,SLOT(updateLogcamera()));
+    QObject::connect(&qnode,SIGNAL(loggingText()),this,SLOT(updateText()));
 //    QObject::connect(&qnode, SIGNAL(loggingUpdated()), this, SLOT(updateLoggingView()));
 
 }
@@ -36,12 +37,22 @@ void MainWindow::updateLogcamera()
   displayMat(qnode.image);
 }
 
+void MainWindow::updateText()
+{
+  displayText(qnode.text);
+}
+
 void MainWindow::displayMat(const QImage &image)
 {
       qimage_mutex_.lock();
       qimage_ = image.copy();
       ui->label_camera->setPixmap(QPixmap::fromImage(qimage_.scaled(ui->label_camera->size(),Qt::KeepAspectRatio)));
       qimage_mutex_.unlock();
+}
+
+void MainWindow::displayText(const QString &text)
+{
+      ui->leadingLine_param->setText(text);
 }
 
 void MainWindow::on_pushButton_clicked()

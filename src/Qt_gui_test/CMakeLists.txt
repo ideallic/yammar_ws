@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   cv_bridge
   image_transport
+  height_border_msgs
 )
 find_package(Qt5  REQUIRED COMPONENTS  Widgets  )
 find_package(OpenCV REQUIRED)

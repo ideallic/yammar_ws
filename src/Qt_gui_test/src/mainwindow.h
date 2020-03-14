@@ -28,7 +28,9 @@ private slots:
     void on_pushButtonConnect_clicked();
     void on_pushButtonSend_clicked();
     void updateLogcamera();
+    void updateText();
     void displayMat(const QImage& image);
+    void displayText(const QString& text);
 
     void on_pushButton_clicked();
 
