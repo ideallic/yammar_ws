@@ -76,6 +76,7 @@ bool QNode::init()
     // Add your ros communications here.
     chatter_publisher = n.advertise<std_msgs::String>("testgui_chat", 1000);
     chatter_subscriber = nSub.subscribe("testgui_chat", 100, &QNode::RecvTopicCallback, this);
+    text_subscriber = nSub.subscribe("text",100,&QNode::TextCallback, this);
     image_sub = it.subscribe("/boud_depth",100,&QNode::myCallback_img,this);//相机尝试
 
     //ros::spin();
@@ -86,6 +87,11 @@ bool QNode::init()
 void QNode::RecvTopicCallback(const std_msgs::StringConstPtr &msg)
 {
     log_listen(Info, std::string("I heard: ")+msg->data.c_str());
+}
+
+void QNode::TextCallback(const std_msgs::StringConstPtr &msg)
+{
+
 }
 
 void QNode::run()

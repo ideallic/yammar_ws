@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<mSize>
+  1902 2438</mSize>
+<targetPoint00>
+  560. 440.</targetPoint00>
+<targetPoint01>
+  1442. 440.</targetPoint01>
+<targetPoint02>
+  1362. 740.</targetPoint02>
+<targetPoint03>
+  610. 740.</targetPoint03>
+<targetPoint10>
+  625. 1508.</targetPoint10>
+<targetPoint11>
+  620. 1047.</targetPoint11>
+<targetPoint12>
+  680. 1027.</targetPoint12>
+<targetPoint13>
+  685. 1498.</targetPoint13>
+<targetPoint20>
+  1202. 1638.</targetPoint20>
+<targetPoint21>
+  700. 1638.</targetPoint21>
+<targetPoint22>
+  700. 1538.</targetPoint22>
+<targetPoint23>
+  1202. 1538.</targetPoint23>
+<targetPoint30>
+  1286. 1030.</targetPoint30>
+<targetPoint31>
+  1282. 1528.</targetPoint31>
+<targetPoint32>
+  1222. 1528.</targetPoint32>
+<targetPoint33>
+  1232. 1030.</targetPoint33>
+</opencv_storage>

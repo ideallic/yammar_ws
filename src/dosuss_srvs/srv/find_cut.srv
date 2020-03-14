@@ -1,0 +1,7 @@
+bool start
+---
+uint32 p_w
+uint32 p_h
+uint8[] pixel_r
+uint8[] pixel_g
+uint8[] pixel_b
