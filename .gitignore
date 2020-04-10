@@ -4,3 +4,7 @@ build/
 devel/
 
 bag/
+
+src/.clangd/
+
+src/.idea/

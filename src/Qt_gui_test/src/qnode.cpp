@@ -9,12 +9,14 @@
 /*****************************************************************************
 ** Includes
 *****************************************************************************/
+#include <qobjectdefs.h>
 #include <ros/ros.h>
 #include <ros/network.h>
 #include <string>
-#include <std_msgs/String.h>
 #include <sstream>
 #include <qnode.h>
+#include "ros/init.h"
+#include "ros/rate.h"
 #include "sensor_msgs/image_encodings.h"
 
 
@@ -68,27 +70,38 @@ bool QNode::init()
     {
         return false;
     }
-    ros::start(); // explicitly needed since our nodehandle is going out of scope.
-    ros::NodeHandle n;
-    ros::NodeHandle nSub;
 
+    ros::start(); // explicitly needed since our nodehandle is going out of scope.
+    ros::NodeHandle nSub;
     ros::NodeHandle im;
     image_transport::ImageTransport it(im);
+
     // Add your ros communications here.
-    chatter_publisher = n.advertise<std_msgs::String>("testgui_chat", 1000);
-    chatter_subscriber = nSub.subscribe("testgui_chat", 100, &QNode::RecvTopicCallback, this);
     text_subscriber = nSub.subscribe("/height_border_param",100,&QNode::TextCallback, this);
+    chart_subscriber = nSub.subscribe("/chart",1,&QNode::ChartCallback,this);
+    FH_subscriber = nSub.subscribe("/FH_speed",1,&QNode::FHCallback,this);
     image_sub = it.subscribe("/boud_depth",100,&QNode::myCallback_img,this);//相机尝试
 
-    //ros::spin();
     start();
+    ROS_INFO_STREAM("inited qnode.");
+
+
+    // ros::spin();
+    // run();
+
+    // int loop_count = 1;
+    // ros::Rate loop_rate(10);
+    // while (!ros::isShuttingDown()) {
+    //         ros::spinOnce();
+    //         loop_rate.sleep();
+    //         loop_count++;
+    // }
+    // std::cout << "Ros shutdown, proceeding to close the gui." << std::endl;
+    // Q_EMIT rosShutdown(); // used to signal the gui for a shutdown (useful to roslaunch)
+
     return true;
 }
 
-void QNode::RecvTopicCallback(const std_msgs::StringConstPtr &msg)
-{
-    log_listen(Info, std::string("I heard: ")+msg->data.c_str());
-}
 
 void QNode::TextCallback(const height_border_msgs::height_borderConstPtr &msg)
 {
@@ -96,8 +109,23 @@ void QNode::TextCallback(const height_border_msgs::height_borderConstPtr &msg)
     Q_EMIT loggingText();
 }
 
+void QNode::ChartCallback(const std_msgs::Float32Ptr &msg)
+{
+	chart = msg->data;
+	ROS_INFO_STREAM("chart receive: "<<chart);
+	Q_EMIT loggingChart();
+}
+
+void QNode::FHCallback(const std_msgs::Float32Ptr &msg)
+{
+	FH = msg->data;
+	ROS_INFO_STREAM("FH receive: "<<FH);
+	Q_EMIT loggingFH();
+}
+
 void QNode::run()
 {
+    ROS_INFO_STREAM("running qnode.");
     //ros::Rate loop_rate(1);
     ros::Duration initDur(0.1);
     int count = 0;
@@ -109,10 +137,10 @@ void QNode::run()
 //        msg.data = ss.str();
 //        chatter_publisher.publish(msg);
 //        log(Info,std::string("I sent: ")+msg.data);
-        ros::spinOnce();
-        //loop_rate.sleep();
-        initDur.sleep();
-        ++count;
+	ros::spinOnce();
+	//loop_rate.sleep();
+	initDur.sleep();
+	++count;
     }
     std::cout << "Ros shutdown, proceeding to close the gui." << std::endl;
     Q_EMIT rosShutdown(); // used to signal the gui for a shutdown (useful to roslaunch)

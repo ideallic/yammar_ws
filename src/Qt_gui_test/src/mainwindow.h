@@ -29,6 +29,9 @@ private slots:
     void on_pushButtonSend_clicked();
     void updateLogcamera();
     void updateText();
+
+    void displayChart();
+    void updateFH();
     void displayMat(const QImage& image);
     void displayText(const QString& text);
 

@@ -25,6 +25,7 @@ set(SOURCES
   src/bigcamera.cpp
   src/qnode.cpp
   src/main.cpp
+  src/Widget.cpp
 )
 
 set(FORMS

@@ -15,7 +15,9 @@
 ** Includes
 *****************************************************************************/
 #include <ros/ros.h>
-#include "std_msgs/String.h"
+#include "ros/subscriber.h"
+#include <std_msgs/String.h>
+#include <std_msgs/Float32.h>
 #include <string>
 #include <QThread>
 #include <QStringListModel>
@@ -53,6 +55,8 @@ public:
     cv::Mat img;
     QImage image;
     QString text;
+    float chart;
+    float FH;
 
     /*********************
     ** Logging
@@ -70,7 +74,8 @@ public:
         {return &logging_model;}
     void log( const LogLevel &level, const std::string &msg);
 
-    void RecvTopicCallback(const std_msgs::StringConstPtr &msg);
+    void ChartCallback(const std_msgs::Float32Ptr &msg);
+    void FHCallback(const std_msgs::Float32Ptr &msg);
     void TextCallback(const height_border_msgs::height_borderConstPtr &msg);
     QStringListModel* loggingModelLis()
         {return &logging_listen;}
@@ -79,18 +84,21 @@ public:
     void ros_test(const std::string s);
 
 Q_SIGNALS:
-//    void loggingUpdated();
     void loggingListen();
     void rosShutdown();
     void loggingCamera();
     void loggingText();
+    void loggingChart();
+    void loggingFH();
 
 private:
     int init_argc;
     char** init_argv;
-    ros::Publisher chatter_publisher;
     ros::Subscriber chatter_subscriber;
     ros::Subscriber text_subscriber;
+    ros::Subscriber chart_subscriber;
+    ros::Subscriber FH_subscriber;
+
     QStringListModel logging_model;
     QStringListModel logging_listen;
     image_transport::Subscriber image_sub;
