@@ -58,6 +58,29 @@ void *receive_func(void* param)  //接收线程。
 	pthread_exit(0);
 }
 
+void transmit_msg(VCI_CAN_OBJ send[1])
+{
+
+	if(VCI_Transmit(VCI_USBCAN2,0,0,send,1) == 1)
+	{
+		printf("Index:%04d  ",count);count++;
+		printf("CAN1 TX ID:0x%08X",send[0].ID);
+		if(send[0].ExternFlag==0) printf(" Standard ");
+		if(send[0].ExternFlag==1) printf(" Extend   ");
+		if(send[0].RemoteFlag==0) printf(" Data   ");
+		if(send[0].RemoteFlag==1) printf(" Remote ");
+		printf("DLC:0x%02X",send[0].DataLen);
+		printf(" data:0x");
+
+		for(int i=0;i<send[0].DataLen;i++)
+		{
+			printf(" %02X",send[0].Data[i]);
+		}
+
+		printf("\n");
+	}
+}
+
 typedef actionlib::SimpleActionServer<reap_unit_action::ControlReapAction> Server;
 
 // 收到action的goal后调用的回调函数
@@ -127,7 +150,7 @@ void execute(const reap_unit_action::ControlReapGoalConstPtr& goal, Server* as)
 	//}
 	//需要发送的帧，结构体设置//正常发送,数据帧,扩展帧,即CAN帧Data有8个字节,标准帧有效ID为11位,扩展帧29位
 	//DataLen定义为3,即Data[0]、Data[1]、Data[2]是有效的
-	VCI_CAN_OBJ send[2];
+	VCI_CAN_OBJ send[1];
 	send[0].ID=0x28;
 	send[0].SendType=0;
 	send[0].RemoteFlag=0;
@@ -151,29 +174,15 @@ void execute(const reap_unit_action::ControlReapGoalConstPtr& goal, Server* as)
 	// send[0].Data[7] = 0x00;
 	
 	
-	send[0].Data[0] = 0x08;
+	send[0].Data[0] = 0x04;
 	send[0].Data[1] = 0x28;
-	send[0].Data[2] = 0x98;
+	send[0].Data[2] = 0x2A;
 	send[0].Data[3] = 0x00;
 	send[0].Data[4] = 0x00;
 	send[0].Data[5] = 0x00;
 	send[0].Data[6] = 0x00;
 	send[0].Data[7] = 0x00;
 
-	send[1].ID=0x28;
-	send[1].SendType=0;
-	send[1].RemoteFlag=0;
-	send[1].ExternFlag=0;
-	send[1].DataLen=8;
-
-	send[1].Data[0] = 0x08;
-	send[1].Data[1] = 0x28;
-	send[1].Data[2] = 0x9A;
-	send[1].Data[3] = 0x00;
-	send[1].Data[4] = 0xF4;
-	send[1].Data[5] = 0x01;
-	send[1].Data[6] = 0x00;
-	send[1].Data[7] = 0x00;
 
 	int m_run0=1;
 	pthread_t threadid;
@@ -181,6 +190,7 @@ void execute(const reap_unit_action::ControlReapGoalConstPtr& goal, Server* as)
 	ret=pthread_create(&threadid,NULL,receive_func,&m_run0);
 	// 这一小段的接收函数有什么用处呢？应该是打开接收的线程
 
+	transmit_msg(send);
 	// int times = 1;
 	// while(times--)
 	// {
@@ -229,51 +239,216 @@ void execute(const reap_unit_action::ControlReapGoalConstPtr& goal, Server* as)
 
 	usleep(2000000);
 
-	int times = 1;
-	while(times--)
-	{
-		if(VCI_Transmit(VCI_USBCAN2,0,0,send,1) == 1)
-		{
-			printf("Index:%04d  ",count);count++;
-			printf("CAN1 TX ID:0x%08X",send[0].ID);
-			if(send[1].ExternFlag==0) printf(" Standard ");
-			if(send[1].ExternFlag==1) printf(" Extend   ");
-			if(send[1].RemoteFlag==0) printf(" Data   ");
-			if(send[1].RemoteFlag==1) printf(" Remote ");
-			printf("DLC:0x%02X",send[1].DataLen);
-			printf(" data:0x");
 
-			for(int i=0;i<send[1].DataLen;i++)
-			{
-				printf(" %02X",send[1].Data[i]);
-			}
+	send[0].ID=0x28;
+	send[0].SendType=0;
+	send[0].RemoteFlag=0;
+	send[0].ExternFlag=0;
+	send[0].DataLen=8;
 
-			printf("\n");
-		}
-		else
-		{
-			break;
-		}
+	send[0].Data[0] = 0x08;
+	send[0].Data[1] = 0x28;
+	send[0].Data[2] = 0x90;
+	send[0].Data[3] = 0x00;
+	send[0].Data[4] = 0xD0;
+	send[0].Data[5] = 0x05;
+	send[0].Data[6] = 0x00;
+	send[0].Data[7] = 0x00;
 
-		//if(VCI_Transmit(VCI_USBCAN2, 0, 1, send, 1) == 1)
-		//{
-		//printf("Index:%04d  ",count);count++;
-		//printf("CAN2 TX ID:0x%08X", send[0].ID);
-		//if(send[0].ExternFlag==0) printf(" Standard ");
-		//if(send[0].ExternFlag==1) printf(" Extend   ");
-		//if(send[0].RemoteFlag==0) printf(" Data   ");
-		//if(send[0].RemoteFlag==1) printf(" Remote ");
-		//printf("DLC:0x%02X",send[0].DataLen);
-		//printf(" data:0x");			
-		//for(i = 0; i < send[0].DataLen; i++)
-		//{
-		// printf(" %02X", send[0].Data[i]);
-		//}
-		//printf("\n");
-		//send[0].ID+=1;
-		//}
-		//else break;
-	}
+	transmit_msg(send);
+	// times = 1;
+	// while(times--)
+	// {
+	//         if(VCI_Transmit(VCI_USBCAN2,0,0,send,1) == 1)
+	//         {
+	//                 printf("Index:%04d  ",count);count++;
+	//                 printf("CAN1 TX ID:0x%08X",send[0].ID);
+	//                 if(send[0].ExternFlag==0) printf(" Standard ");
+	//                 if(send[0].ExternFlag==1) printf(" Extend   ");
+	//                 if(send[0].RemoteFlag==0) printf(" Data   ");
+	//                 if(send[0].RemoteFlag==1) printf(" Remote ");
+	//                 printf("DLC:0x%02X",send[0].DataLen);
+	//                 printf(" data:0x");
+        //
+	//                 for(int i=0;i<send[0].DataLen;i++)
+	//                 {
+	//                         printf(" %02X",send[0].Data[i]);
+	//                 }
+        //
+	//                 printf("\n");
+	//         }
+	//         else
+	//         {
+	//                 break;
+	//         }
+        //
+	//         //if(VCI_Transmit(VCI_USBCAN2, 0, 1, send, 1) == 1)
+	//         //{
+	//         //printf("Index:%04d  ",count);count++;
+	//         //printf("CAN2 TX ID:0x%08X", send[0].ID);
+	//         //if(send[0].ExternFlag==0) printf(" Standard ");
+	//         //if(send[0].ExternFlag==1) printf(" Extend   ");
+	//         //if(send[0].RemoteFlag==0) printf(" Data   ");
+	//         //if(send[0].RemoteFlag==1) printf(" Remote ");
+	//         //printf("DLC:0x%02X",send[0].DataLen);
+	//         //printf(" data:0x");
+	//         //for(i = 0; i < send[0].DataLen; i++)
+	//         //{
+	//         // printf(" %02X", send[0].Data[i]);
+	//         //}
+	//         //printf("\n");
+	//         //send[0].ID+=1;
+	//         //}
+	//         //else break;
+	// }
+
+
+	//需要发送的帧，结构体设置//正常发送,数据帧,扩展帧,即CAN帧Data有8个字节,标准帧有效ID为11位,扩展帧29位
+	//DataLen定义为3,即Data[0]、Data[1]、Data[2]是有效的
+	send[0].ID=0x27;
+	send[0].SendType=0;
+	send[0].RemoteFlag=0;
+	send[0].ExternFlag=0;
+	send[0].DataLen=8;
+
+	// int i=0;
+	// for(i=0;i<send[0].DataLen;i++)
+	// {
+	//         send[0].Data[i] = i;
+	// }
+	
+	// // 读取第40号电机型号
+	// send[0].Data[0] = 0x04;
+	// send[0].Data[1] = 0x28;
+	// send[0].Data[2] = 0x01;
+	// send[0].Data[3] = 0x00;
+	// send[0].Data[4] = 0x00;
+	// send[0].Data[5] = 0x00;
+	// send[0].Data[6] = 0x00;
+	// send[0].Data[7] = 0x00;
+	
+	
+	send[0].Data[0] = 0x04;
+	send[0].Data[1] = 0x27;
+	send[0].Data[2] = 0x2A;
+	send[0].Data[3] = 0x00;
+	send[0].Data[4] = 0x00;
+	send[0].Data[5] = 0x00;
+	send[0].Data[6] = 0x00;
+	send[0].Data[7] = 0x00;
+
+	transmit_msg(send);
+
+	// times = 1;
+	// while(times--)
+	// {
+	//         if(VCI_Transmit(VCI_USBCAN2,0,0,send,1) == 1)
+	//         {
+	//                 printf("Index:%04d  ",count);count++;
+	//                 printf("CAN1 TX ID:0x%08X",send[0].ID);
+	//                 if(send[0].ExternFlag==0) printf(" Standard ");
+	//                 if(send[0].ExternFlag==1) printf(" Extend   ");
+	//                 if(send[0].RemoteFlag==0) printf(" Data   ");
+	//                 if(send[0].RemoteFlag==1) printf(" Remote ");
+	//                 printf("DLC:0x%02X",send[0].DataLen);
+	//                 printf(" data:0x");
+        //
+	//                 for(int i=0;i<send[0].DataLen;i++)
+	//                 {
+	//                         printf(" %02X",send[0].Data[i]);
+	//                 }
+        //
+	//                 printf("\n");
+	//         }
+	//         else
+	//         {
+	//                 break;
+	//         }
+        //
+	//         //if(VCI_Transmit(VCI_USBCAN2, 0, 1, send, 1) == 1)
+	//         //{
+	//         //printf("Index:%04d  ",count);count++;
+	//         //printf("CAN2 TX ID:0x%08X", send[0].ID);
+	//         //if(send[0].ExternFlag==0) printf(" Standard ");
+	//         //if(send[0].ExternFlag==1) printf(" Extend   ");
+	//         //if(send[0].RemoteFlag==0) printf(" Data   ");
+	//         //if(send[0].RemoteFlag==1) printf(" Remote ");
+	//         //printf("DLC:0x%02X",send[0].DataLen);
+	//         //printf(" data:0x");
+	//         //for(i = 0; i < send[0].DataLen; i++)
+	//         //{
+	//         // printf(" %02X", send[0].Data[i]);
+	//         //}
+	//         //printf("\n");
+	//         //send[0].ID+=1;
+	//         //}
+	//         //else break;
+	// }
+
+	usleep(2000000);
+
+
+	send[0].ID=0x27;
+	send[0].SendType=0;
+	send[0].RemoteFlag=0;
+	send[0].ExternFlag=0;
+	send[0].DataLen=8;
+
+	send[0].Data[0] = 0x08;
+	send[0].Data[1] = 0x27;
+	send[0].Data[2] = 0x90;
+	send[0].Data[3] = 0x00;
+	send[0].Data[4] = 0xD0;
+	send[0].Data[5] = 0x05;
+	send[0].Data[6] = 0x00;
+	send[0].Data[7] = 0x00;
+
+	transmit_msg(send);
+	// times = 1;
+	// while(times--)
+	// {
+	//         if(VCI_Transmit(VCI_USBCAN2,0,0,send,1) == 1)
+	//         {
+	//                 printf("Index:%04d  ",count);count++;
+	//                 printf("CAN1 TX ID:0x%08X",send[0].ID);
+	//                 if(send[0].ExternFlag==0) printf(" Standard ");
+	//                 if(send[0].ExternFlag==1) printf(" Extend   ");
+	//                 if(send[0].RemoteFlag==0) printf(" Data   ");
+	//                 if(send[0].RemoteFlag==1) printf(" Remote ");
+	//                 printf("DLC:0x%02X",send[0].DataLen);
+	//                 printf(" data:0x");
+        //
+	//                 for(int i=0;i<send[0].DataLen;i++)
+	//                 {
+	//                         printf(" %02X",send[0].Data[i]);
+	//                 }
+        //
+	//                 printf("\n");
+	//         }
+	//         else
+	//         {
+	//                 break;
+	//         }
+        //
+	//         //if(VCI_Transmit(VCI_USBCAN2, 0, 1, send, 1) == 1)
+	//         //{
+	//         //printf("Index:%04d  ",count);count++;
+	//         //printf("CAN2 TX ID:0x%08X", send[0].ID);
+	//         //if(send[0].ExternFlag==0) printf(" Standard ");
+	//         //if(send[0].ExternFlag==1) printf(" Extend   ");
+	//         //if(send[0].RemoteFlag==0) printf(" Data   ");
+	//         //if(send[0].RemoteFlag==1) printf(" Remote ");
+	//         //printf("DLC:0x%02X",send[0].DataLen);
+	//         //printf(" data:0x");
+	//         //for(i = 0; i < send[0].DataLen; i++)
+	//         //{
+	//         // printf(" %02X", send[0].Data[i]);
+	//         //}
+	//         //printf("\n");
+	//         //send[0].ID+=1;
+	//         //}
+	//         //else break;
+	// }
 
 	usleep(10000000);//延时单位us，这里设置 10 000 000=10s    10s后关闭接收线程，并退出主程序。
 	m_run0=0;//线程关闭指令。
