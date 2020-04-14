@@ -65,14 +65,64 @@
   "file": "/home/bit/yammar_ws/build/Qt_gui_test/app_node_automoc.cpp"
 },
 {
+  "directory": "/home/bit/yammar_ws/build/avoiding_obstacle",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"avoiding_obstacle\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/avoiding_obstacle_node.dir/src/avoiding_obstacle_node.cpp.o -c /home/bit/yammar_ws/src/avoiding_obstacle/src/avoiding_obstacle_node.cpp",
+  "file": "/home/bit/yammar_ws/src/avoiding_obstacle/src/avoiding_obstacle_node.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/camera_capture",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"camera_capture\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/camera_capture_node.dir/src/camera_capture_node.cpp.o -c /home/bit/yammar_ws/src/camera_capture/src/camera_capture_node.cpp",
+  "file": "/home/bit/yammar_ws/src/camera_capture/src/camera_capture_node.cpp"
+},
+{
   "directory": "/home/bit/yammar_ws/build/fake_msgs",
   "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"fake_msgs\\\" -I/home/bit/yammar_ws/src/fake_msgs/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/fake_msgs_node.dir/src/fake_msgs.cpp.o -c /home/bit/yammar_ws/src/fake_msgs/src/fake_msgs.cpp",
   "file": "/home/bit/yammar_ws/src/fake_msgs/src/fake_msgs.cpp"
 },
 {
+  "directory": "/home/bit/yammar_ws/build/full_view",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"full_view\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/full_view_node.dir/src/full_view_node.cpp.o -c /home/bit/yammar_ws/src/full_view/src/full_view_node.cpp",
+  "file": "/home/bit/yammar_ws/src/full_view/src/full_view_node.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/grain_height_detecte",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"grain_height_detecte\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/grain_height_detecte_node.dir/src/grain_height_detecte_node.cpp.o -c /home/bit/yammar_ws/src/grain_height_detecte/src/grain_height_detecte_node.cpp",
+  "file": "/home/bit/yammar_ws/src/grain_height_detecte/src/grain_height_detecte_node.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/harvest_line_detecte",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"harvest_line_detecte\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/harvest_line_detecte_node.dir/src/harvest_line_detecte_node.cpp.o -c /home/bit/yammar_ws/src/harvest_line_detecte/src/harvest_line_detecte_node.cpp",
+  "file": "/home/bit/yammar_ws/src/harvest_line_detecte/src/harvest_line_detecte_node.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/hmi",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"hmi\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/hmi_node.dir/src/hmi_node.cpp.o -c /home/bit/yammar_ws/src/hmi/src/hmi_node.cpp",
+  "file": "/home/bit/yammar_ws/src/hmi/src/hmi_node.cpp"
+},
+{
   "directory": "/home/bit/yammar_ws/build/matplotlib_tutorial",
   "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"matplotlib_tutorial\\\" -I/home/bit/yammar_ws/src/matplotlib_tutorial/include -I/home/bit/yammar_ws/src/matplotlib_tutorial/include/matplotlib_tutorial -I/usr/include/python2.7    -std=c++11 -o CMakeFiles/matplotlib_tutorial_node.dir/src/matplotlib_tutorial_node.cpp.o -c /home/bit/yammar_ws/src/matplotlib_tutorial/src/matplotlib_tutorial_node.cpp",
   "file": "/home/bit/yammar_ws/src/matplotlib_tutorial/src/matplotlib_tutorial_node.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/mmw_capture",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"mmw_capture\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/mmw_capture_node.dir/src/mmw_capture_node.cpp.o -c /home/bit/yammar_ws/src/mmw_capture/src/mmw_capture_node.cpp",
+  "file": "/home/bit/yammar_ws/src/mmw_capture/src/mmw_capture_node.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/obstacle_detecte",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"obstacle_detecte\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/obstacle_detecte_node.dir/src/obstacle_detecte_node.cpp.o -c /home/bit/yammar_ws/src/obstacle_detecte/src/obstacle_detecte_node.cpp",
+  "file": "/home/bit/yammar_ws/src/obstacle_detecte/src/obstacle_detecte_node.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/path_control",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"path_control\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/path_control_node.dir/src/path_control_node.cpp.o -c /home/bit/yammar_ws/src/path_control/src/path_control_node.cpp",
+  "file": "/home/bit/yammar_ws/src/path_control/src/path_control_node.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/path_planning",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"path_planning\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/path_planning_node.dir/src/path_planning_node.cpp.o -c /home/bit/yammar_ws/src/path_planning/src/path_planning_node.cpp",
+  "file": "/home/bit/yammar_ws/src/path_planning/src/path_planning_node.cpp"
 },
 {
   "directory": "/home/bit/yammar_ws/build/qtros",
@@ -105,6 +155,26 @@
   "file": "/home/bit/yammar_ws/build/qtros/include/qtros/moc_qnode.cxx"
 },
 {
+  "directory": "/home/bit/yammar_ws/build/reap_height_capture",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"reap_height_capture\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/reap_height_capture_node.dir/src/reap_height_capture_node.cpp.o -c /home/bit/yammar_ws/src/reap_height_capture/src/reap_height_capture_node.cpp",
+  "file": "/home/bit/yammar_ws/src/reap_height_capture/src/reap_height_capture_node.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/reap_height_control",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"reap_height_control\\\" -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/reap_height_control_node.dir/src/reap_height_control_node.cpp.o -c /home/bit/yammar_ws/src/reap_height_control/src/reap_height_control_node.cpp",
+  "file": "/home/bit/yammar_ws/src/reap_height_control/src/reap_height_control_node.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/reap_unit_control",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"reap_unit_control\\\" -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/reap_unit_control_node.dir/src/reap_unit_control_node.cpp.o -c /home/bit/yammar_ws/src/reap_unit_control/src/reap_unit_control_node.cpp",
+  "file": "/home/bit/yammar_ws/src/reap_unit_control/src/reap_unit_control_node.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/system_monitor",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"system_monitor\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/system_monitor_node.dir/src/system_monitor_node.cpp.o -c /home/bit/yammar_ws/src/system_monitor/src/system_monitor_node.cpp",
+  "file": "/home/bit/yammar_ws/src/system_monitor/src/system_monitor_node.cpp"
+},
+{
   "directory": "/home/bit/yammar_ws/build/action_tutorials",
   "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"action_tutorials\\\" -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/DoDishes_client.dir/src/DoDishes_client.cpp.o -c /home/bit/yammar_ws/src/action_tutorials/src/DoDishes_client.cpp",
   "file": "/home/bit/yammar_ws/src/action_tutorials/src/DoDishes_client.cpp"
@@ -113,6 +183,26 @@
   "directory": "/home/bit/yammar_ws/build/action_tutorials",
   "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"action_tutorials\\\" -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/DoDishes_server.dir/src/DoDishes_server.cpp.o -c /home/bit/yammar_ws/src/action_tutorials/src/DoDishes_server.cpp",
   "file": "/home/bit/yammar_ws/src/action_tutorials/src/DoDishes_server.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/reap_height_action",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"reap_height_action\\\" -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/ControlReapHeight_client.dir/src/ControlReapHeight_client.cpp.o -c /home/bit/yammar_ws/src/reap_height_action/src/ControlReapHeight_client.cpp",
+  "file": "/home/bit/yammar_ws/src/reap_height_action/src/ControlReapHeight_client.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/reap_height_action",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"reap_height_action\\\" -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/ControlReapHeight_server.dir/src/ControlReapHeight_server.cpp.o -c /home/bit/yammar_ws/src/reap_height_action/src/ControlReapHeight_server.cpp",
+  "file": "/home/bit/yammar_ws/src/reap_height_action/src/ControlReapHeight_server.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/reap_unit_action",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"reap_unit_action\\\" -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/ControlReap_client.dir/src/ControlReap_client.cpp.o -c /home/bit/yammar_ws/src/reap_unit_action/src/ControlReap_client.cpp",
+  "file": "/home/bit/yammar_ws/src/reap_unit_action/src/ControlReap_client.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/reap_unit_action",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"reap_unit_action\\\" -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/ControlReap_server.dir/src/ControlReap_server.cpp.o -c /home/bit/yammar_ws/src/reap_unit_action/src/ControlReap_server.cpp",
+  "file": "/home/bit/yammar_ws/src/reap_unit_action/src/ControlReap_server.cpp"
 },
 {
   "directory": "/home/bit/yammar_ws/build/controlcan",
@@ -150,29 +240,34 @@
   "file": "/home/bit/yammar_ws/src/find_cut/src/get_image.cpp"
 },
 {
-  "directory": "/home/bit/yammar_ws/build/rqt_image_view-master",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rqt_image_view\\\" -Drqt_image_view_EXPORTS -I/home/bit/yammar_ws/src/rqt_image_view-master/include -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64  -fPIC   -fPIC -o CMakeFiles/rqt_image_view.dir/src/rqt_image_view/image_view.cpp.o -c /home/bit/yammar_ws/src/rqt_image_view-master/src/rqt_image_view/image_view.cpp",
-  "file": "/home/bit/yammar_ws/src/rqt_image_view-master/src/rqt_image_view/image_view.cpp"
+  "directory": "/home/bit/yammar_ws/build/rqt_image_view",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rqt_image_view\\\" -Drqt_image_view_EXPORTS -I/home/bit/yammar_ws/src/rqt_image_view/include -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64  -fPIC   -fPIC -o CMakeFiles/rqt_image_view.dir/src/rqt_image_view/image_view.cpp.o -c /home/bit/yammar_ws/src/rqt_image_view/src/rqt_image_view/image_view.cpp",
+  "file": "/home/bit/yammar_ws/src/rqt_image_view/src/rqt_image_view/image_view.cpp"
 },
 {
-  "directory": "/home/bit/yammar_ws/build/rqt_image_view-master",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rqt_image_view\\\" -Drqt_image_view_EXPORTS -I/home/bit/yammar_ws/src/rqt_image_view-master/include -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64  -fPIC   -fPIC -o CMakeFiles/rqt_image_view.dir/src/rqt_image_view/ratio_layouted_frame.cpp.o -c /home/bit/yammar_ws/src/rqt_image_view-master/src/rqt_image_view/ratio_layouted_frame.cpp",
-  "file": "/home/bit/yammar_ws/src/rqt_image_view-master/src/rqt_image_view/ratio_layouted_frame.cpp"
+  "directory": "/home/bit/yammar_ws/build/rqt_image_view",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rqt_image_view\\\" -Drqt_image_view_EXPORTS -I/home/bit/yammar_ws/src/rqt_image_view/include -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64  -fPIC   -fPIC -o CMakeFiles/rqt_image_view.dir/src/rqt_image_view/ratio_layouted_frame.cpp.o -c /home/bit/yammar_ws/src/rqt_image_view/src/rqt_image_view/ratio_layouted_frame.cpp",
+  "file": "/home/bit/yammar_ws/src/rqt_image_view/src/rqt_image_view/ratio_layouted_frame.cpp"
 },
 {
-  "directory": "/home/bit/yammar_ws/build/rqt_image_view-master",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rqt_image_view\\\" -Drqt_image_view_EXPORTS -I/home/bit/yammar_ws/src/rqt_image_view-master/include -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64  -fPIC   -fPIC -o CMakeFiles/rqt_image_view.dir/include/rqt_image_view/moc_image_view.cpp.o -c /home/bit/yammar_ws/build/rqt_image_view-master/include/rqt_image_view/moc_image_view.cpp",
-  "file": "/home/bit/yammar_ws/build/rqt_image_view-master/include/rqt_image_view/moc_image_view.cpp"
+  "directory": "/home/bit/yammar_ws/build/rqt_image_view",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rqt_image_view\\\" -Drqt_image_view_EXPORTS -I/home/bit/yammar_ws/src/rqt_image_view/include -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64  -fPIC   -fPIC -o CMakeFiles/rqt_image_view.dir/include/rqt_image_view/moc_image_view.cpp.o -c /home/bit/yammar_ws/build/rqt_image_view/include/rqt_image_view/moc_image_view.cpp",
+  "file": "/home/bit/yammar_ws/build/rqt_image_view/include/rqt_image_view/moc_image_view.cpp"
 },
 {
-  "directory": "/home/bit/yammar_ws/build/rqt_image_view-master",
-  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rqt_image_view\\\" -Drqt_image_view_EXPORTS -I/home/bit/yammar_ws/src/rqt_image_view-master/include -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64  -fPIC   -fPIC -o CMakeFiles/rqt_image_view.dir/include/rqt_image_view/moc_ratio_layouted_frame.cpp.o -c /home/bit/yammar_ws/build/rqt_image_view-master/include/rqt_image_view/moc_ratio_layouted_frame.cpp",
-  "file": "/home/bit/yammar_ws/build/rqt_image_view-master/include/rqt_image_view/moc_ratio_layouted_frame.cpp"
+  "directory": "/home/bit/yammar_ws/build/rqt_image_view",
+  "command": "/usr/bin/c++   -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rqt_image_view\\\" -Drqt_image_view_EXPORTS -I/home/bit/yammar_ws/src/rqt_image_view/include -I/home/bit/yammar_ws/devel/include -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64  -fPIC   -fPIC -o CMakeFiles/rqt_image_view.dir/include/rqt_image_view/moc_ratio_layouted_frame.cpp.o -c /home/bit/yammar_ws/build/rqt_image_view/include/rqt_image_view/moc_ratio_layouted_frame.cpp",
+  "file": "/home/bit/yammar_ws/build/rqt_image_view/include/rqt_image_view/moc_ratio_layouted_frame.cpp"
 },
 {
-  "directory": "/home/bit/yammar_ws/build/rgbd",
-  "command": "/usr/bin/c++   -DDISABLE_OPENNI2 -DDISABLE_PCAP -DDISABLE_PNG -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"rgbd\\\" -DvtkFiltersFlowPaths_AUTOINIT=\"1(vtkFiltersParallelFlowPaths)\" -DvtkIOExodus_AUTOINIT=\"1(vtkIOParallelExodus)\" -DvtkIOGeometry_AUTOINIT=\"1(vtkIOMPIParallel)\" -DvtkIOImage_AUTOINIT=\"1(vtkIOMPIImage)\" -DvtkIOSQL_AUTOINIT=\"2(vtkIOMySQL,vtkIOPostgreSQL)\" -DvtkRenderingContext2D_AUTOINIT=\"1(vtkRenderingContextOpenGL)\" -DvtkRenderingCore_AUTOINIT=\"4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)\" -DvtkRenderingFreeType_AUTOINIT=\"2(vtkRenderingFreeTypeFontConfig,vtkRenderingMatplotlib)\" -DvtkRenderingLIC_AUTOINIT=\"1(vtkRenderingParallelLIC)\" -DvtkRenderingVolume_AUTOINIT=\"1(vtkRenderingVolumeOpenGL)\" -I/usr/include/vtk-6.2 -I/usr/include/python2.7 -I/usr/lib/openmpi/include/openmpi/opal/mca/event/libevent2021/libevent -I/usr/lib/openmpi/include/openmpi/opal/mca/event/libevent2021/libevent/include -I/usr/lib/openmpi/include -I/usr/lib/openmpi/include/openmpi -I/usr/include/jsoncpp -I/usr/include/freetype2 -I/usr/include/x86_64-linux-gnu/freetype2 -I/usr/include/x86_64-linux-gnu -I/usr/include/hdf5/openmpi -I/usr/include/libxml2 -I/usr/include/tcl -I/opt/ros/kinetic/include -I/opt/ros/kinetic/include/opencv-3.3.1-dev -I/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/eigen3 -I/usr/include/pcl-1.7 -I/usr/include/ni      -std=c++11 -o CMakeFiles/rgbd_node.dir/src/rgbd_node.cpp.o -c /home/bit/yammar_ws/src/rgbd/src/rgbd_node.cpp",
-  "file": "/home/bit/yammar_ws/src/rgbd/src/rgbd_node.cpp"
+  "directory": "/home/bit/yammar_ws/build/travel_control",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"travel_control\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/travel_control_node.dir/src/travel_control_node.cpp.o -c /home/bit/yammar_ws/src/travel_control/src/travel_control_node.cpp",
+  "file": "/home/bit/yammar_ws/src/travel_control/src/travel_control_node.cpp"
+},
+{
+  "directory": "/home/bit/yammar_ws/build/unload_position_detecte",
+  "command": "/usr/bin/c++   -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"unload_position_detecte\\\" -I/opt/ros/kinetic/include -I/opt/ros/kinetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp    -o CMakeFiles/unload_position_detecte_node.dir/src/unload_position_detecte_node.cpp.o -c /home/bit/yammar_ws/src/unload_position_detecte/src/unload_position_detecte_node.cpp",
+  "file": "/home/bit/yammar_ws/src/unload_position_detecte/src/unload_position_detecte_node.cpp"
 },
 {
   "directory": "/home/bit/yammar_ws/build/usb_cam",

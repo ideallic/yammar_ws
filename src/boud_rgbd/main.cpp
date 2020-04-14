@@ -109,8 +109,8 @@ int main(int argc,char** argv)
     typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::Image, sensor_msgs::Image> sync_pol;
     message_filters::Synchronizer<sync_pol> sync(sync_pol(10), rgb_sub,depth_sub);
     sync.registerCallback(boost::bind(&boud_RGBD,_1,_2));
-    filter_pub = nh.advertise<sensor_msgs::PointCloud2>("height_depth", 1000);
-    height_border_param= nh.advertise<height_border_msgs::height_border>("/height_border_param", 1);
+    filter_pub = nh.advertise<sensor_msgs::PointCloud2>("harvest_line_stream", 1000);
+    height_border_param= nh.advertise<height_border_msgs::height_border>("grain_height_data", 1);
     ros::spin();
     return 0;
 }
