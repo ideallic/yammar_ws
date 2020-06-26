@@ -1,4 +1,4 @@
-#!/home/bit/yammar_ws/venv/bin/python
+#!/home/sjtu_wanghaili/yammar_ws/venv/bin/python
 
 import sys
 import getopt
